@@ -30,7 +30,7 @@
     "react-select": "^0.4.9",
     "request": "^2.55.0",
     "store-prototype": "^1.1.0",
-    "superagent": "^1.2.0",
+    "superagent": "^5.3.1",
     "underscore": "^1.8.3"
   },
   "engines": {
