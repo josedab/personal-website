@@ -1,0 +1,35 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>All Posts - Jose David Baena | Software Engineer</title>
+        <link>https://www.josedavidbaena.com/posts/</link>
+        <description>All Posts | Jose David Baena | Software Engineer</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>josedab@gmail.com (José David Baena)</managingEditor>
+            <webMaster>josedab@gmail.com (José David Baena)</webMaster><lastBuildDate>Fri, 19 Jun 2020 18:42:39 -0700</lastBuildDate><atom:link href="https://www.josedavidbaena.com/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Juneteenth</title>
+    <link>https://www.josedavidbaena.com/posts/2020/06/juneteenth/</link>
+    <pubDate>Fri, 19 Jun 2020 18:42:39 -0700</pubDate>
+    <author>Author</author>
+    <guid>https://www.josedavidbaena.com/posts/2020/06/juneteenth/</guid>
+    <description><![CDATA[From Wikipedia:
+ Juneteenth is a holiday celebrating the emancipation of those who had been enslaved in the United States. Originating in Texas, it is now celebrated annually on the 19th of June throughout the United States, with varying official recognition.
+ This day represents the emancipation of the last remaining enslaved African Americans in the Confederacy.
+GitHub and Juneteenth GitHub invited all employees to listen, learn, engage, and participate on a global Day Of Learning on Juneteenth.]]></description>
+</item><item>
+    <title>Using Lighthouse on this Website</title>
+    <link>https://www.josedavidbaena.com/posts/2020/06/using-lighthouse-on-this-website/</link>
+    <pubDate>Sat, 06 Jun 2020 14:28:48 -0700</pubDate>
+    <author>Author</author>
+    <guid>https://www.josedavidbaena.com/posts/2020/06/using-lighthouse-on-this-website/</guid>
+    <description><![CDATA[The beginning A couple of weeks ago, I decided to start this personal website. The main issue I have with starting projects/ideas is that I am obsessed with performance. I always find myself at a place where I want something efficient, cheap (as it usually is just a hobby used for learning), and that follows best practices. As you are probably thinking right now, it is not possible to have everything 😂.]]></description>
+</item><item>
+    <title>Hello world!</title>
+    <link>https://www.josedavidbaena.com/posts/2020/05/hello-world/</link>
+    <pubDate>Sat, 23 May 2020 14:35:30 -0700</pubDate>
+    <author>Author</author>
+    <guid>https://www.josedavidbaena.com/posts/2020/05/hello-world/</guid>
+    <description><![CDATA[Hi there! 👋
+My name is José David, and you ended up on my site. I wanted to welcome you to the site; I hope you found what you were looking for 😄.
+Motivation The main reason I decided to start a blog was to document thoughts, ideas, interests I have daily.
+I usually write these ideas on Evernote. However, after reading Max Stoiber notes about Working in public), I got inspired to start sharing them publicly.]]></description>
+</item></channel>
+</rss>

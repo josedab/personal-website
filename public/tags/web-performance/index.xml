@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>web-performance - Tag - Jose David Baena | Software Engineer</title>
+        <link>https://www.josedavidbaena.com/tags/web-performance/</link>
+        <description>web-performance - Tag - Jose David Baena | Software Engineer</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>josedab@gmail.com (José David Baena)</managingEditor>
+            <webMaster>josedab@gmail.com (José David Baena)</webMaster><lastBuildDate>Sat, 06 Jun 2020 14:28:48 -0700</lastBuildDate><atom:link href="https://www.josedavidbaena.com/tags/web-performance/" rel="self" type="application/rss+xml" /><item>
+    <title>Using Lighthouse on this Website</title>
+    <link>https://www.josedavidbaena.com/posts/2020/06/using-lighthouse-on-this-website/</link>
+    <pubDate>Sat, 06 Jun 2020 14:28:48 -0700</pubDate>
+    <author>Author</author>
+    <guid>https://www.josedavidbaena.com/posts/2020/06/using-lighthouse-on-this-website/</guid>
+    <description><![CDATA[The beginning A couple of weeks ago, I decided to start this personal website. The main issue I have with starting projects/ideas is that I am obsessed with performance. I always find myself at a place where I want something efficient, cheap (as it usually is just a hobby used for learning), and that follows best practices. As you are probably thinking right now, it is not possible to have everything 😂.]]></description>
+</item></channel>
+</rss>

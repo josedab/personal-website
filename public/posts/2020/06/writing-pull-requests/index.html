@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Writing Pull Requests - Jose David Baena | Software Engineer</title><meta name="Description" content="Jose David Baena | Software Engineer"><meta property="og:title" content="Writing Pull Requests" />
+<meta property="og:description" content="Writing pull requests (PRs) is hard and every style of writing them is a whole world. Some styles are better than others (keep reading on this post for some examples), and eventually, the end result is getting your code merged.
+Recently,on one of the weekly syncs with my team at GitHub, we talked about how to improve this process. As you would expect, everyone has a different opinion about the subject and a different vision." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.josedavidbaena.com/posts/2020/06/writing-pull-requests/" />
+<meta property="og:image" content="https://www.josedavidbaena.com/logo.png"/>
+<meta property="article:published_time" content="2020-06-01T22:20:29-07:00" />
+<meta property="article:modified_time" content="2020-06-01T22:20:29-07:00" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://www.josedavidbaena.com/logo.png"/>
+
+<meta name="twitter:title" content="Writing Pull Requests"/>
+<meta name="twitter:description" content="Writing pull requests (PRs) is hard and every style of writing them is a whole world. Some styles are better than others (keep reading on this post for some examples), and eventually, the end result is getting your code merged.
+Recently,on one of the weekly syncs with my team at GitHub, we talked about how to improve this process. As you would expect, everyone has a different opinion about the subject and a different vision."/>
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.josedavidbaena.com/posts/2020/06/writing-pull-requests/" /><link rel="prev" href="https://www.josedavidbaena.com/posts/2020/05/hello-world/" /><link rel="next" href="https://www.josedavidbaena.com/posts/2020/06/using-lighthouse-on-this-website/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Writing Pull Requests",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/www.josedavidbaena.com\/posts\/2020\/06\/writing-pull-requests\/"
+        },"genre": "posts","wordcount":  450 ,
+        "url": "https:\/\/www.josedavidbaena.com\/posts\/2020\/06\/writing-pull-requests\/","datePublished": "2020-06-01T22:20:29-07:00","dateModified": "2020-06-01T22:20:29-07:00","publisher": {
+            "@type": "Organization",
+            "name": "xxxx"},"author": {
+                "@type": "Person",
+                "name": "José David Baena"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Jose David Baena | Software Engineer">&lt;josedab /&gt;</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/"> Home </a><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/about/"> About </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Jose David Baena | Software Engineer">&lt;josedab /&gt;</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/" title="">Home</a><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/about/" title="">About</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content always-active" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Writing Pull Requests</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>José David Baena</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-06-01">2020-06-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;450 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;3 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#wild-west">Wild West</a></li>
+    <li><a href="#the-perfect-workflow">The perfect workflow</a></li>
+    <li><a href="#framework-for">Framework for</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>Writing pull requests (PRs) is hard and every style of writing them is a whole world. Some styles are better than others (keep reading on this post for some examples), and eventually, the end result is getting your code merged.</p>
+<p>Recently,on one of the weekly syncs with my team at GitHub, we talked about how to improve this process. As you would expect, everyone has a different opinion about the subject and a different vision. The more diverse a team is, the more variety you will have. While having a diverse team is definitely something you should be looking for, it also is the communication for interacting together, and in the case of writing PRs, as it is an essential part of our workflow, this has to be discussed.</p>
+<p>On this post, my aim is to provide a framework on how to write PRs to be sucessfully accepted. This is, by no means, an ultimate tool to get your 15k LOC PR merged, but a set of guidelines I normally have in mind for every project I work on.</p>
+<h1 id="why-use-prs">Why use PRs</h1>
+<ul>
+<li>Learning on the owner and reviewer side. Not only technical skills, also soft skills get formed with time.</li>
+<li>PRs can be used as additional documentation.</li>
+</ul>
+<h1 id="styles-of-working">Styles of working</h1>
+<p>During my professional career, I have seen different styles for merging work into a shared codebase:</p>
+<h2 id="wild-west">Wild West</h2>
+<p>You are supposed to write a PR to push your code, however it is not really enforced. Writing the PR takes as much time as writing the next feature, so you just push to master directly. It is the Wild West and you know you have to resolve a conflict because the VCS server rejected your push.
+My personal take: Try to fix it and introduce obligatory PRs. In addition, block master (or your production branch) so code without a review cannot be pushed.</p>
+<h2 id="the-perfect-workflow">The perfect workflow</h2>
+<p>Every commit represents only one thing. The reviewer will go normally over every commit you have done and review piece by piece.
+This is a fictional example on how it would be adopting this approach:</p>
+<p>Advantages:
+It is clean, it is clear, it is easy to review
+Disadvantages:</p>
+<ul>
+<li>If the review is not trivial, you likely have suggestions/feedback you want to incorporate. These changes will go to one of the previous commits you have in your history. This ends up on replaying commits and force pushes, affecting history each time.</li>
+<li>You also take the risk of committing your work in a series of commits that the reviewer can disagree.
+Unless your work is perfect from the beginning, you are likely rewriting your history several times during the process.</li>
+</ul>
+<h2 id="framework-for">Framework for</h2>
+<p>I am sure you can</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2020-06-01</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/posts/2020/06/writing-pull-requests/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://www.josedavidbaena.com/posts/2020/06/writing-pull-requests/" data-title="Writing Pull Requests" data-via="josedab"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://www.josedavidbaena.com/posts/2020/06/writing-pull-requests/"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="Share on WhatsApp" data-sharer="whatsapp" data-url="https://www.josedavidbaena.com/posts/2020/06/writing-pull-requests/" data-title="Writing Pull Requests" data-web><i class="fab fa-whatsapp fa-fw"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://www.josedavidbaena.com/posts/2020/06/writing-pull-requests/" data-title="Writing Pull Requests"><i data-svg-src="/lib/simple-icons/icons/line.min.svg"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://www.josedavidbaena.com/posts/2020/06/writing-pull-requests/" data-title="Writing Pull Requests"><i class="fab fa-weibo fa-fw"></i></a><a href="javascript:void(0);" title="Share on Myspace" data-sharer="myspace" data-url="https://www.josedavidbaena.com/posts/2020/06/writing-pull-requests/" data-title="Writing Pull Requests" data-description=""><i data-svg-src="/lib/simple-icons/icons/myspace.min.svg"></i></a><a href="javascript:void(0);" title="Share on Blogger" data-sharer="blogger" data-url="https://www.josedavidbaena.com/posts/2020/06/writing-pull-requests/" data-title="Writing Pull Requests" data-description=""><i class="fab fa-blogger fa-fw"></i></a><a href="javascript:void(0);" title="Share on Evernote" data-sharer="evernote" data-url="https://www.josedavidbaena.com/posts/2020/06/writing-pull-requests/" data-title="Writing Pull Requests"><i class="fab fa-evernote fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/2020/05/hello-world/" class="prev" rel="prev" title="Hello world!"><i class="fas fa-angle-left fa-fw"></i>Hello world!</a>
+            <a href="/posts/2020/06/using-lighthouse-on-this-website/" class="next" rel="next" title="Using Lighthouse on this Website">Using Lighthouse on this Website<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.71.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">José David Baena</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false}};</script><script type="text/javascript" src="/js/theme.min.js"></script><script type="text/javascript">
+            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
+            gtag('config', 'UA-170037159-1', { 'anonymize_ip': true });
+        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=UA-170037159-1" async></script></body>
+</html>
